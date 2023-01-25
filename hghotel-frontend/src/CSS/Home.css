@@ -1,0 +1,7 @@
+.cover{
+    background-image: url("../Components/img/hotelBG.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 50vh;
+}

@@ -1,9 +1,11 @@
 import React from "react";
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function DropdownMenu(props) {
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
   return (
     <div>
       <div>
@@ -15,11 +17,26 @@ function DropdownMenu(props) {
             variant="secondary"
             title="Menu"
           >
-            <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-            <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-            <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
+            <Dropdown.Item eventKey="1" href="/">
+              Home
+            </Dropdown.Item>
+            <Dropdown.Item eventKey="2" href="/restaurant">
+              Restaurant
+            </Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
+            {!isAuthenticated && (
+              <Dropdown.Item eventKey="3" onClick={() => loginWithRedirect()}>
+                Log In
+              </Dropdown.Item>
+            )}
+            {isAuthenticated && (
+              <Dropdown.Item
+                eventKey="3"
+                onClick={() => logout({ returnTo: window.location.origin })}
+              >
+                Log Out
+              </Dropdown.Item>
+            )}
           </DropdownType>
         ))}
       </div>
