@@ -11,10 +11,12 @@ function Searchbar(props) {
     const [checkin, setCheckin] = useState(new Date().toISOString().slice(0, 10));
     const [checkout, setCheckout] = useState(new Date().toISOString().slice(0, 10));
     const [roomArray, setRoomArray] = useState([]);
+    const [ini, setIni] = useState(0);
+    const [outi, setOuti] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    RoomListBuilder(checkin, checkout, setRoomArray);
+    RoomListBuilder(checkin, checkout, setRoomArray, setIni, setOuti);
   };
 
   return (
@@ -62,7 +64,7 @@ function Searchbar(props) {
       </section>
 
       <section>
-        {roomArray.map((item)=>{<RoomCard item={item} />})}
+        {roomArray.length>0 ? <RoomCard roomArray={roomArray} ini={ini} outi={outi} setRoomArray={setRoomArray} /> : ""}
       </section>
     </div>
   );

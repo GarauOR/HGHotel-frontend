@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-function RoomListBuilder(checkin, checkout, setRoomArray) {
+function RoomListBuilder(checkin, checkout, setRoomArray, setIni, setOuti) {
     const serverlink = process.env.REACT_APP_SERVER_URL;
     const getAvailableRooms = async () => {
         const getRoomCall = await axios.get(`${serverlink}/room`);
@@ -8,6 +8,7 @@ function RoomListBuilder(checkin, checkout, setRoomArray) {
         let ini;
         let outi;
         let availableRooms=[];
+    
 
         allRooms[0].dates.map((item, i)=>{
             if(item.date===checkin){
@@ -36,6 +37,8 @@ function RoomListBuilder(checkin, checkout, setRoomArray) {
             return item
         })
         setRoomArray(availableRooms);
+        setIni(ini);
+        setOuti(outi);
     }
     return getAvailableRooms();
 }
