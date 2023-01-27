@@ -5,6 +5,7 @@ import Footer from '../Components/Footer';
 import Home from '../Pages/Home';
 import Admin from '../Pages/Admin';
 import Restaurant from '../Pages/Restaurant';
+import Summary from '../Components/Summary';
 
 function Routing(props) {
     return (
@@ -16,6 +17,7 @@ function Routing(props) {
                     <Route path='/restaurant' element={<Restaurant />} />
                     <Route path='/admin' element={<Admin />} />
                 </Routes>
+                <Summary />
                 <Footer />
             </Router>
             

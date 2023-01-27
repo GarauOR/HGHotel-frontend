@@ -24,6 +24,17 @@ function Searchbar(props) {
       <section>
         <Form onSubmit={handleSubmit}>
           <Row>
+          <Col>
+              <FloatingLabel
+                controlId="floatingInputGrid"
+                label="Number of Guests"
+              >
+                <Form.Control
+                  type="number"
+                  name="pax"
+                />
+              </FloatingLabel>
+            </Col>
             <Col>
               <FloatingLabel
                 controlId="floatingInputGrid"
@@ -47,7 +58,7 @@ function Searchbar(props) {
                 <Form.Control
                   type="date"
                   value={checkout}
-                  min={new Date().toISOString().slice(0, 10)}
+                  min={checkin}
                   max="2023-02-28"
                   name="checkout"
                   onChange={(e)=>{setCheckout(e.target.value);}}

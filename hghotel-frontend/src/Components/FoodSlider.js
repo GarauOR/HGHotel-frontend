@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button';
 import Menu from "./Menu";
 
 function FoodSlider(props) {
-  const [arrows, setArrows] = useState(false);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -24,17 +23,13 @@ function FoodSlider(props) {
     },
   ];
 
-  const handleClick = () => {
-    
-  };
-
   const Slideshow = () => {
     return (
       <div className="slide-container">
-        <Fade arrows={arrows}>
+        <Fade arrows={false} pauseOnHover={false} canSwipe={false}>
           {fadeImages.map((fadeImage, index) => (
             <div key={index}>
-              <img style={{ width: "100%" }} src={fadeImage.url} />
+              <img style={{ width: "100%" }} src={fadeImage.url} alt="" />
             </div>
           ))}
         </Fade>
@@ -44,6 +39,7 @@ function FoodSlider(props) {
 
   return (
     <section>
+      <h3>Food Porn</h3>
       <div>{Slideshow()}</div>
       <div><Button variant="secondary" onClick={handleShow}>View Menu</Button></div>
       <Menu show={show} handleClose={handleClose} />
