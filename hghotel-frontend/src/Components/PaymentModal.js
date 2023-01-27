@@ -1,11 +1,13 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import axios from "axios";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function PaymentModal(props) {
   const serverlink = process.env.REACT_APP_SERVER_URL;
+  const { user } = useAuth0();
 
   const handlePayment = () => {
     //code snippet to take payment
@@ -19,6 +21,14 @@ function PaymentModal(props) {
         await axios.put(`${serverlink}/room/${item._id}`, dates);
       };
       updateRoomCall();
+    });
+    props.checkedRooms.map((item) => {
+      const username = user.email || user.nickname;
+      let booking = {description:item.description, checkin:props.checkin, checkout:props.checkout, username:username};
+      const addBookingCall = async () => {
+        await axios.post(`${serverlink}/booking`, booking);
+      };
+      addBookingCall();
     });
     props.handleV();
     props.handleClose();

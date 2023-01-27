@@ -70,6 +70,8 @@ function RoomCard(props) {
         ini={props.ini}
         outi={props.outi}
         handleV={handleV}
+        checkin={props.checkin}
+        checkout={props.checkout}
       />
       <PaidModal 
         visible={visible}
