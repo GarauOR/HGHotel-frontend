@@ -7,11 +7,11 @@ function Footer(props) {
     <div>
       <Navbar>
         <Container>
-          <Navbar.Brand href="#home">All rights reserved</Navbar.Brand>
+          <Navbar.Brand>All rights reserved</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              Made by: <a href="#login">Luca Garau</a>
+              Made by: <a href="https://github.com/GarauOR">Luca Garau</a>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>

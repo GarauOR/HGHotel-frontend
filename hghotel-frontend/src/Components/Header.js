@@ -25,6 +25,7 @@ function Header(props) {
           <Nav className="me-auto">
           <Nav.Link href="/">Hotel</Nav.Link>
             <Nav.Link href="/restaurant">Restaurant</Nav.Link>
+            {isAuthenticated && <Nav.Link href="/bookings">My Bookings</Nav.Link>}
             {username==="luca91garau@gmail.com" && <Nav.Link href="/admin">Admin area</Nav.Link>}
             {isAuthenticated && <p>{`Welcome ${user.name}`}</p>}
             <Login />
