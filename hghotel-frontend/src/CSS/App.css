@@ -1,0 +1,495 @@
+/*GLOBAL START*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image:-webkit-radial-gradient(lightgrey, transparent);
+  background-color: #4a422c;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+p  {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  letter-spacing: 0.08rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.15rem;
+}
+
+.color{
+  color:#4a422c;
+}
+
+
+.p {
+  font-size: 0.85rem;
+}
+.h1 {
+  font-size: 2.2rem;
+}
+
+.h2 {
+  font-size: 2rem;
+}
+
+.h3 {
+  font-size: 1.8rem;
+}
+
+.h4 {
+  font-size: 1.6rem;
+}
+
+.h5 {
+  font-size: 1.4rem;
+}
+
+.h6 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.h7 {
+  font-size: 1.06rem;
+  font-weight: 400;
+}
+
+.martop {
+  margin-top: 5px;
+}
+
+.marbtm {
+  margin-bottom: 5px;
+}
+
+.marrgt {
+  margin-right: 10px;
+}
+
+.marlft {
+  margin-left: 10px;
+}
+
+.mbDispBlock {
+  display: block;
+}
+
+.mbDispFlex {
+  display: flex;
+}
+
+.dtDispBlock {
+  display: none;
+}
+
+.dtDispFlex {
+  display: none;
+}
+
+.centre {
+  text-align: center;
+}
+/*GLOBAL END*/
+
+/*NAVBAR START*/
+.bg-personal {
+  background-color: rgba(0, 0, 0, 0.632);
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 70px;
+  color: azure;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+/*NAVBAR END*/
+
+/*HOME START*/
+/*cover*/
+.cover{
+  background-image: url("../Components/img/hotelBG.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  position: relative;
+}
+
+.title {
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.403), transparent);
+  width: 50%;
+  position: absolute;
+  color: azure;
+  padding: 5px 0px 5px 15px;
+  top: 5%;
+}
+
+/*searchbar*/
+.guests {
+  min-width: 75px;
+}
+
+.calendar {
+  width: 100%;
+  min-width: 70px;
+}
+
+.searchbar {
+  margin-top: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  min-height: 110px;
+  padding: 10px;
+}
+
+.btn-search{
+  background-color: #60563d;
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.03rem;
+}
+
+.btn-search:hover{
+  background-color: #4a422c;
+  color: lightgrey;
+}
+
+/*roomcard*/
+.roomCard {
+  min-width: 210px;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchRoom-img {
+  max-width:180px;
+  width: 90%;
+}
+
+.search-auto-margin {
+  margin: auto 0px;
+}
+
+.btn-book {
+    background-color: #60563d;
+    color: rgb(255, 255, 255);
+    width: 90%;
+    margin: 0px 0px 15px;
+    letter-spacing: 0.08rem;
+    max-width: 500px;
+    box-shadow: 0px 0px 2px black;
+}
+
+.btn-outline-dark {
+  letter-spacing: 0.08rem;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0px 0px 2px black;
+    color: azure;
+    border-color: azure;
+}
+
+.btn-book:hover{
+  background-color: #4a422c;
+  color: lightgrey;
+}
+
+
+/*hotelinfo*/
+.infoAlign {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contactCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  height: 30px;
+}
+
+.contact2 {
+  height: 40px;
+}
+
+/*slideshow*/
+.slide-container {
+  position: relative;
+  z-index: 0;
+  text-align: center;
+  width:100%;
+  max-width: 500px;
+  max-height: 70vh;
+  margin: 30px auto;
+}
+.divfood {
+  background-image:linear-gradient(to right, transparent, rgba(0, 0, 0, 0.338), transparent);
+  width:88%;
+  position: absolute;
+  top: 5%;
+  right: 0;
+  left: 0;
+  color: azure;
+  padding: 5px 0px 5px;
+  z-index: 1;
+  margin: 0px auto;
+}
+
+.foodtitle {
+  margin: auto;
+}
+
+.div-btn{
+  z-index: 1;
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.food-btn { 
+  background-color: rgba(0, 0, 0, 0.365);
+}
+
+.slidecont {
+  width:100%;
+  max-width: 500px;
+  max-height: 70vh;
+  padding: 0px 20px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.zooming {
+  margin-top: -20%;
+  width:100%;
+  max-width: 500px;
+  height: 600px;
+  text-align: center;
+  margin-left: -40px;
+}
+
+/*weatherwidget*/
+.weatherCard {
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.weather-img {
+  max-width: 500px;
+  padding: 0px 50px;
+  margin: auto;
+}
+/*HOME END*/
+
+/*SUMMARY START*/
+.summary-link {
+  color:azure;
+}
+
+.summary-link:hover {
+  color:lightcyan;
+}
+/*SUMMARY END*/
+
+/*FOOTER START*/
+.footerColor {
+  color: azure;
+}
+
+.footer a:link {
+  color: azure;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.footer a:visited {
+  color: azure;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: lightcyan;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.footer a:active {
+  color: azure;
+  background-color: transparent;
+  text-decoration: none;
+}
+/*FOOTER END*/
+
+/*RESTAURANT START*/
+.cover2{
+  background-image: url("../Components/img/restaurant.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  position: relative;
+}
+
+.title2 {
+  background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.248), transparent);
+  width: 40%;
+  position: absolute;
+  color: azure;
+  padding: 5px 15px 5px 0px;
+  top: 5%;
+  right: 0px;
+  text-align: end;
+}
+
+/*cuisine*/
+.cuisineCard {
+  margin: 20px 20px;
+}
+
+/*chef*/
+.chef-img {
+  width: 100%;
+}
+
+.chefGradient {
+  margin: 0px auto ;
+  width: 70%;
+  max-width: 500px;
+  background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.729), transparent);
+}
+
+.chef-descr {
+  padding: 5px 15px;
+}
+/*RESTAURANT END*/
+
+/*BOOKING START*/
+.cover3 {
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80");
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  position: relative;
+}
+ .title3 {
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.311), transparent);
+  width: 60%;
+  position: absolute;
+  color: azure;
+  padding: 5px 0px 5px 15px;
+  top: 5%;
+ }
+
+ /*bookingcard*/
+ .booking-img {
+  width: 100%;
+  max-width: 500px;
+ }
+
+ .bookingCard {
+  margin-bottom: 10px;
+ }
+/*BOOKING END*/
+
+/*ADMIN START*/
+.cover4 {
+  background-image: url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  position: relative;
+}
+ .title4 {
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.311), transparent);
+  width: 60%;
+  position: absolute;
+  color: azure;
+  padding: 5px 0px 5px 15px;
+  top: 5%;
+ }
+
+.adminCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 80px;
+  justify-content: space-between;
+}
+
+.alignAdmin {
+  display: flex;
+  align-items:center;
+}
+/*ADMIN END*/
+
+/*MENU START*/
+.menuTitle {
+  margin: auto 0px auto 0px;
+}
+
+.menuMargin {
+  margin-top: 45px;
+}
+
+.menuFloat {
+  float: right;
+}
+/*MENU END*/
+
+@media screen and (min-width: 768px) {
+  .mbDispBlock {
+    display: none;
+  }
+  
+  .mbDispFlex {
+    display: none;
+  }
+  
+  .dtDispBlock {
+    display: block;
+  }
+  
+  .dtDispFlex {
+    display: flex;
+  }
+
+  .spacer {
+    flex-grow: 1;
+  }
+
+  .rightSide {
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+  }
+}

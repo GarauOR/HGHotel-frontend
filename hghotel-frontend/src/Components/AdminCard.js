@@ -1,19 +1,29 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import AdminDelete from './AdminDelete';
-
+import React from "react";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import AdminDelete from "./AdminDelete";
 
 function AdminCard(props) {
-    const handleUpdate = () => {
-        props.setItem(props.item);
-        props.handleShow();
-    };
+  const handleUpdate = () => {
+    props.setItem(props.item);
+    props.handleShow();
+  };
 
-    return <Card body>{`Room number ${props.item.number} | ${props.item.description} | £${props.item.price} `}
-    <Button variant="secondary" onClick={handleUpdate}>Update</Button>
-    <Button variant="secondary" onClick={()=>AdminDelete(props)}>Delete</Button>
-    </Card>;
+  return (
+    <Card body className="marbtm">
+      <div className="alignAdmin">
+        {`Room number ${props.item.number} | ${props.item.description} | £${props.item.price} `}
+      </div>
+      <div className="adminCard">
+        <Button variant="search" onClick={handleUpdate}>
+          Update
+        </Button>
+        <Button variant="search" onClick={() => AdminDelete(props)}>
+          Delete
+        </Button>
+      </div>
+    </Card>
+  );
 }
 
 export default AdminCard;

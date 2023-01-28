@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AddRoom from "../Components/AddRoom";
 import axios from "axios";
 import AdminCard from "../Components/AdminCard";
+import Header from "../Components/Header";
 import AdminUpdateModal from "../Components/AdminUpdateModal";
 
 function Admin(props) {
@@ -20,7 +21,12 @@ function Admin(props) {
 
   return (
     <div>
-      <h2>Room Database</h2>
+      <section className="cover4 marbtm">
+        <h4 className="h4 title4">Admin Page</h4>
+        <Header />
+      </section>
+
+      <h2 className="centre martop">Room Database</h2>
       {roomList.map((item, idx) => {
         return <AdminCard item={item} handleShow={handleShow} setItem={setItem} setRoomList={setRoomList} key={idx} />;
       })}

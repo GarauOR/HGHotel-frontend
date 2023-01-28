@@ -24,10 +24,10 @@ function AddRoom(props) {
     };
 
   return (
-    <div>
+    <div style={{marginTop:"70px"}} className="centre">
       <h2>Add a room</h2>
       <Form onSubmit={handleAddSubmit}>
-        <Form.Group className="mb-3" controlId="roomNumber">
+        <Form.Group style={{textAlign:"start"}} className="mb-3" controlId="roomNumber">
           <Form.Label>Room Number</Form.Label>
           <Form.Control
             type="number"
@@ -36,7 +36,7 @@ function AddRoom(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="roomDescription">
+        <Form.Group style={{textAlign:"start"}} className="mb-3" controlId="roomDescription">
           <Form.Label>Room Description</Form.Label>
           <Form.Control
             type="text"
@@ -45,7 +45,7 @@ function AddRoom(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="roomPrice">
+        <Form.Group style={{textAlign:"start"}} className="mb-3" controlId="roomPrice">
           <Form.Label>Room Rate</Form.Label>
           <Form.Control
             type="number"
@@ -54,7 +54,7 @@ function AddRoom(props) {
           />
         </Form.Group>
 
-        <Button variant="secondary" type="submit">
+        <Button variant="book" type="submit">
           Submit
         </Button>
       </Form>

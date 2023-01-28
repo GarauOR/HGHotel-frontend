@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Card from "react-bootstrap/Card";
+import Weather from "./img/weather.gif";
 
 function WeatherWidget(props) {
   const server = process.env.REACT_APP_SERVER_URL;
@@ -32,20 +33,20 @@ function WeatherWidget(props) {
     });
   return (
     <div>
-      <Card style={{ width: "18rem" }}>
+      <Card className="weatherCard color">
+      <Card.Header className="h4 centre">
+          Today's weather at Oasis Bay
+        </Card.Header>
         <Card.Img
-          variant="top"
-          src="https://i0.wp.com/upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Weather-sun-clouds-rain.svg/1024px-Weather-sun-clouds-rain.svg.png"
+          bsPrefix="weather-img"
+          src={Weather}
         />
-        <Card.Body>
-          <Card.Title>Today's weather at Oasis Bay</Card.Title>
-          <Card.Text>
-            <p>{`The sky will have ${sky}`}</p>
-            <p>{`${wind}`}</p>
-            <p>{`Maximum temperature of ${max} Celsius`}</p>
-            <p>{`Minimum temperature of ${min} Celsius`}</p>
+          <Card.Text style={{margin:"20px"}}>
+            <p className="h7">{`The sky will have ${sky}`}</p>
+            <p className="h7">{`${wind}`}</p>
+            <p className="h7">{`Maximum temperature of ${max} Celsius`}</p>
+            <p className="h7">{`Minimum temperature of ${min} Celsius`}</p>
           </Card.Text>
-        </Card.Body>
       </Card>
     </div>
   );

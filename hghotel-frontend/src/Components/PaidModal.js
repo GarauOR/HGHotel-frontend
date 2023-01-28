@@ -11,7 +11,7 @@ function PaidModal(props) {
         </Modal.Header>
         <Modal.Body>Congratulations, your booking is now confirmed!</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={props.handleX}>
+          <Button variant="search" onClick={props.handleX}>
             Close
           </Button>
         </Modal.Footer>

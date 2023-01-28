@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import BookingCard from "../Components/BookingCard";
 import { useAuth0 } from "@auth0/auth0-react";
+import Header from "../Components/Header";
 
 function Bookings(props) {
   const server = process.env.REACT_APP_SERVER_URL;
@@ -22,10 +23,16 @@ function Bookings(props) {
 
   return (
     <div>
-      <h2>My Bookings</h2>
+      <section className="cover3 marbtm">
+        <h4 className="h4 title3">My Bookings</h4>
+        <Header />
+      </section>
+      
+      <section style={{marginBottom:"20px"}}>
       {roomList.map((item, idx) => {
         return <BookingCard item={item} setRoomList={setRoomList} key={idx} username={user.email || user.nickname} />;
       })}
+      </section>
     </div>
   );
 }

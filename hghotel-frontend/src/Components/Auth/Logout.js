@@ -7,7 +7,7 @@ const Logout = () => {
 
   return (
     isAuthenticated && (
-      <Button variant="secondary" onClick={() => logout({ returnTo: window.location.origin })}>
+      <Button variant="outline-light" onClick={() => logout({ returnTo: window.location.origin })}>
         Log Out
       </Button>
     )
