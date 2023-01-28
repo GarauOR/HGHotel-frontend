@@ -19,19 +19,22 @@ function Header(props) {
 
   return (
     <div>
-      <Navbar bg="dark" variant="light">
+      <Navbar bg="personal" variant="dark">
         <Container>
-          <Navbar.Brand>HGHotel</Navbar.Brand>
-          <Nav className="me-auto">
-          <Nav.Link href="/">Hotel</Nav.Link>
-            <Nav.Link href="/restaurant">Restaurant</Nav.Link>
-            {isAuthenticated && <Nav.Link href="/bookings">My Bookings</Nav.Link>}
-            {username==="luca91garau@gmail.com" && <Nav.Link href="/admin">Admin area</Nav.Link>}
-            {isAuthenticated && <p>{`Welcome ${user.name}`}</p>}
+          <Navbar.Brand className="logo">HGhotel</Navbar.Brand>
+          <Nav className="me-auto dtDispFlex">
+          <Nav.Link href="/" style={{color:"azure"}}>Hotel</Nav.Link>
+            <Nav.Link href="/restaurant" style={{color:"azure"}}>Restaurant</Nav.Link>
+            {isAuthenticated && <Nav.Link style={{color:"azure"}} href="/bookings">My Bookings</Nav.Link>}
+            {username==="luca91garau@gmail.com" && <Nav.Link style={{color:"azure"}} href="/admin">Admin area</Nav.Link>}
+            
+          </Nav>
+          <section className="dtDispFlex rightSide">
+            <Nav.Link disabled="true" style={{color:"azure"}}>{isAuthenticated && `Welcome ${user.name}`}</Nav.Link>
             <Login />
             <Logout />
-            <DropdownMenu />
-          </Nav>
+            </section>
+          <DropdownMenu />
         </Container>
       </Navbar>
     </div>

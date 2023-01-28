@@ -5,13 +5,13 @@ import Navbar from "react-bootstrap/Navbar";
 function Footer(props) {
   return (
     <div>
-      <Navbar>
+      <Navbar className="footer">
         <Container>
-          <Navbar.Brand>All rights reserved</Navbar.Brand>
+        <Navbar.Text className="footerColor">All rights reserved</Navbar.Text>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-              Made by: <a href="https://github.com/GarauOR">Luca Garau</a>
+            <Navbar.Text className="footerColor">
+              Made by: <a  href="https://github.com/GarauOR">Luca Garau</a>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>

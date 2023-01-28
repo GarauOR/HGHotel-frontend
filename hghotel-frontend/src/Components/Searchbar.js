@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import RoomListBuilder from "./RoomListBuilder";
+import Card from 'react-bootstrap/Card';
 import RoomCard from "./RoomCard";
 
 function Searchbar(props) {
@@ -23,21 +24,23 @@ function Searchbar(props) {
 
   return (
     <div>
-      <section>
+      <Card className="searchbar">
         <Form onSubmit={handleSubmit}>
           <Row>
             <Col>
               <FloatingLabel
                 controlId="floatingInputGrid"
-                label="Number of Guests"
+                label="Guests"
+                className="guests martop marbtm"
               >
-                <Form.Control type="number" name="pax" />
+                <Form.Control type="number" name="pax"/>
               </FloatingLabel>
             </Col>
             <Col>
               <FloatingLabel
                 controlId="floatingInputGrid"
                 label="Check-in date"
+                className="martop marbtm calendar"
               >
                 <Form.Control
                   type="date"
@@ -55,6 +58,7 @@ function Searchbar(props) {
               <FloatingLabel
                 controlId="floatingInputGrid"
                 label="Check-out date"
+                className="martop marbtm calendar"
               >
                 <Form.Control
                   type="date"
@@ -68,14 +72,14 @@ function Searchbar(props) {
                 />
               </FloatingLabel>
             </Col>
-            <Col>
-              <Button variant="secondary" type="submit" size="lg">
+            <Col style={{margin:"auto"}}>
+              <Button variant="book" type="submit" size="lg" style={{marginTop:"10px", minWidth:"100px"}}>
                 Search
               </Button>
             </Col>
           </Row>
         </Form>
-      </section>
+        </Card>
 
       <section>
         {roomArray.length > 0 ? (

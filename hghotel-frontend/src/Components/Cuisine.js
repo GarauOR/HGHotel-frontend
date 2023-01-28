@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Menu from "./Menu";
+import Card from "react-bootstrap/Card";
 
 function Cuisine(props) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div>
-      <section>
-        <h2>Our Cuisine</h2>
-        <p>
+      <Card className="martop">
+        <Card.Header className="h4 centre color">
+        Our Cuisine
+        </Card.Header>
+        <Card.Text className="centre cuisineCard marrgt marlft">
+        <p className="p color" style={{marginBottom:"30px"}}>
           The cuisine of Sardinia is the traditional cuisine of the island of
           Sardinia, and the expression of its culinary art. It is characterised
           by its own variety, and by the fact of having been enriched through a
@@ -24,8 +27,8 @@ function Cuisine(props) {
           as an intangible cultural heritage.
         </p>
 
-        <h5>Seafood Specialisation</h5>
-        <p>
+        <h5 className="h6 color">Seafood Specialisation</h5>
+        <p className="p color">
           Typical dishes of Cagliari are the fregula cun còciula ("fregula with
           clams"); the còciula e cotza a sa schiscionera ("clams and mussels
           cooked in a pan"), and then the burrida a sa casteddaja (based on
@@ -35,7 +38,7 @@ function Cuisine(props) {
           butàriga, and the spaghitus cun arritzonis, that is sea urchin
           spaghetti with artichoke or wild asparagus.
         </p>
-        <p>
+        <p className="p color">
           The cuisine typical of the Oristano area and the Cabras ponds, but
           even Bosa, often include eels. From the fish eggs, the mullet botarga
           is extracted, which can be served alone or used to dress the pasta.
@@ -44,7 +47,7 @@ function Cuisine(props) {
           herb, the zibba (obione in Italian). A variety of the burrida
           (dogfish) can also be tasted.
         </p>
-        <p>
+        <p className="p color">
           Along the Sulcis coastline are some of the most ancient tuna fisheries
           of the Mediterranean. The local cuisine is influenced by Genoa, and is
           strongly based on bluefin tuna fishing and related products, like
@@ -52,26 +55,26 @@ function Cuisine(props) {
           and the Tabarchin cascà, a variety of the couscous dressed with
           vegetables.
         </p>
-        <p>
+        <p className="p color">
           The cuisine of Alghero reflects the Catalan influence permeating the
           town, which can be seen from the Catalan way with which the lobster is
           prepared, that is boiled with tomato, celery and onion and accompanied
           by a sauce of lemon, olive oil, salt and pepper.
         </p>
-        <p>
+        <p className="p color">
           Towards Santa Teresa and the Maddalena archipelago, octopus salads are
           a typical specialty, while in Olbia there are dishes based on mussels
           and clams. From both the north and the south of the island are the
           so-called Ortziadas or Bultigghjata, floured and fried sea anemones.
         </p>
-        <div>
-          <Button variant="secondary" onClick={handleShow}>
+        <div style={{marginBottom:"30px"}}>
+          <Button variant="book" onClick={handleShow}>
             View Menu
           </Button>
         </div>
         <Menu show={show} handleClose={handleClose} />
-      </section>
-    </div>
+        </Card.Text>
+      </Card>
   );
 }
 

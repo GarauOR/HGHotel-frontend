@@ -1,6 +1,6 @@
 import React from "react";
-import "../CSS/Home.css";
 import Searchbar from "../Components/Searchbar";
+import Header from '../Components/Header';
 import HotelInfo from "../Components/HotelInfo";
 import FoodSlider from "../Components/FoodSlider";
 import WeatherWidget from "../Components/WeatherWidget";
@@ -9,7 +9,8 @@ function Home(props) {
   return (
     <div>
       <section className="cover">
-        <h4>Oasis Bay by HGHotel</h4>
+        <h4 className="h4 title">Oasis Bay by HGhotel</h4>
+        <Header />
       </section>
 
       <Searchbar />

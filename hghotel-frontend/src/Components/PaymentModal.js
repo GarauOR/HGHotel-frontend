@@ -40,10 +40,10 @@ function PaymentModal(props) {
     <div>
       <Modal show={props.show} onHide={props.handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Please insert your card details</Modal.Title>
+          <Modal.Title className="color">Please insert your card details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <Form className="color">
             <Form.Group className="mb-3" controlId="paymentForm">
               <Form.Label>Card Number</Form.Label>
               <Form.Control type="text" placeholder="xxxx-xxxx-xxxx-xxxx" />
@@ -66,10 +66,10 @@ function PaymentModal(props) {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={props.handleClose}>
+          <Button variant="search" onClick={props.handleClose}>
             Close
           </Button>
-          <Button variant="secondary" onClick={handlePayment}>
+          <Button variant="search" onClick={handlePayment}>
             Confirm Payment
           </Button>
         </Modal.Footer>

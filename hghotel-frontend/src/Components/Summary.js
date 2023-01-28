@@ -4,15 +4,15 @@ import Nav from "react-bootstrap/Nav";
 function Summary(props) {
   return (
     <div>
-      <Nav className="justify-content-center" activeKey="/home">
+      <Nav className="justify-content-center">
         <Nav.Item>
-          <Nav.Link href="#">Our Partners</Nav.Link>
+          <Nav.Link href="#" className="summary-link">Our Partners</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="#">About us</Nav.Link>
+          <Nav.Link href="#" className="summary-link">About us</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="#">Careers</Nav.Link>
+          <Nav.Link href="#" className="summary-link">Careers</Nav.Link>
         </Nav.Item>
       </Nav>
     </div>
