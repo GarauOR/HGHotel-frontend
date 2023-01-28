@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import Home from '../Pages/Home';
+import Admin from '../Pages/Admin';
+import Restaurant from '../Pages/Restaurant';
 
 function Routing(props) {
     return (
@@ -11,6 +13,8 @@ function Routing(props) {
                 <Header />
                 <Routes>
                     <Route path='/' element={<Home />} />
+                    <Route path='/restaurant' element={<Restaurant />} />
+                    <Route path='/admin' element={<Admin />} />
                 </Routes>
                 <Footer />
             </Router>
