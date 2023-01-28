@@ -175,6 +175,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-left: -3%;
 }
 
 .card-body {
@@ -189,6 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .search-auto-margin {
   margin: auto 0px;
+  margin-right: 3%;
 }
 
 .btn-book {
@@ -414,6 +416,7 @@ h1, h2, h3, h4, h5, h6 {
  .booking-img {
   width: 100%;
   max-width: 500px;
+  margin: 0px auto;
  }
 
  .bookingCard {
