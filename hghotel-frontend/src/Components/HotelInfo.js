@@ -12,35 +12,35 @@ function HotelInfo(props) {
           Hotel Information
         </Card.Header>
         <Card.Text className="cuisineCard">
-          <p className="p">
-            Situated on the island of Tenerife – just off the coast of Los
-            Gigantes – Oasis Bay is one of Tenerife’s most luxurious and
+          <span style={{display:"block", marginBottom:"15px"}} className="p">
+            Situated on the island of Tenerife - just off the coast of Los
+            Gigantes - Oasis Bay is one of Tenerife's most luxurious and
             exclusive beachfront escapes.
-          </p>
+          </span>
 
-          <p className="p">
+          <span style={{display:"block", marginBottom:"15px"}} className="p">
             The resort, wedged between the jungle and the ocean, features just
             36 thatched villas made out of sustainably sourced wood and recycled
             materials.
-          </p>
+          </span>
 
-          <p className="p">
+          <span style={{display:"block", marginBottom:"15px"}} className="p">
             Each villa has its own private infinity pool, sundeck and a lavish
             indoor-outdoor bathroom.
-          </p>
+          </span>
 
-          <p className="p">
-            The resort’s pièce de résistance? Its jungle-enshrouded Cinema
+          <span style={{display:"block", marginBottom:"15px"}} className="p">
+            The resort's pièce de résistance? Its jungle-enshrouded Cinema
             Paradiso, an open-air movie theater set above a lagoon that screens
             films nightly.
-          </p>
+          </span>
 
-          <div style={{margin:"30px 0px 25px"}}>
-            <img src={Map} />
-            <p>Avenida Los Océanos s/n, 38686, Guia De Isora, Islas Canarias</p>
-          <span className="contactCont color"><img src={Email} className="contact2 marrgt" /><h6>reception.oasisbay@hghotel.es</h6></span>
-          <span className="contactCont color"><img src={Phone} className="contact marrgt" /><h6>(+34)922 123456</h6></span>
-          </div>
+          <span style={{margin:"30px 0px 25px", display:"block"}}>
+            <img src={Map} alt="map" />
+            <span style={{display:"block", marginBottom:"10px", marginTop:"5px"}}>Avenida Los Océanos s/n, 38686, Guia De Isora, Islas Canarias</span>
+          <span style={{display:"block", marginBottom:"5px"}} className="contactCont color"><img src={Email} alt="email" className="contact2 marrgt" /><span className="hinfo-title">reception.oasisbay@hghotel.es</span></span>
+          <span style={{display:"block", marginBottom:"15px"}} className="contactCont color"><img src={Phone} alt="phone" className="contact marrgt" /><span className="hinfo-title">(+34)922 123456</span></span>
+          </span>
         </Card.Text>
       </Card>
     </section>

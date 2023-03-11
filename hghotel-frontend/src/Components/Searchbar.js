@@ -46,7 +46,7 @@ function Searchbar(props) {
                   type="date"
                   value={checkin}
                   min={new Date().toISOString().slice(0, 10)}
-                  max="2023-02-27"
+                  max="2025-12-31"
                   name="checkin"
                   onChange={(e) => {
                     setCheckin(e.target.value);
@@ -64,7 +64,7 @@ function Searchbar(props) {
                   type="date"
                   value={checkout}
                   min={checkin}
-                  max="2023-02-28"
+                  max="2025-12-31"
                   name="checkout"
                   onChange={(e) => {
                     setCheckout(e.target.value);

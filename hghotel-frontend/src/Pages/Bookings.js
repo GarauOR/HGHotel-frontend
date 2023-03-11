@@ -19,7 +19,7 @@ function Bookings(props) {
       };
       roomListCall();
     }
-  }, [user]);
+  }, [user, roomList]);
 
   return (
     <div>
