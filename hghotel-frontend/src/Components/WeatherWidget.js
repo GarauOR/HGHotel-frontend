@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "react-bootstrap/Card";
 import Weather from "./img/weather.gif";
@@ -14,7 +14,7 @@ function WeatherWidget(props) {
   axios
     .get(`${server}/weather`)
     .then((res) => {
-        setWeather(res.data);
+      setWeather(res.data);
     })
     .then(() => {
       if (weather.wind.speed < 5) {
@@ -26,27 +26,38 @@ function WeatherWidget(props) {
       } else {
         setWind("With strong winds");
       }
-    }).then(()=>{
-        setMax(weather.main.temp_max);
-        setMin(weather.main.temp_min);
-        setSky(weather.weather[0].description);
+    })
+    .then(() => {
+      setMax(weather.main.temp_max);
+      setMin(weather.main.temp_min);
+      setSky(weather.weather[0].description);
     });
+
   return (
     <div>
       <Card className="weatherCard color">
-      <Card.Header className="h4 centre">
+        <Card.Header className="h4 centre">
           Today's weather at Oasis Bay
         </Card.Header>
-        <Card.Img
-          bsPrefix="weather-img"
-          src={Weather}
-        />
-          <Card.Text style={{margin:"20px"}}>
-            <p className="h7">{`The sky will have ${sky}`}</p>
-            <p className="h7">{`${wind}`}</p>
-            <p className="h7">{`Maximum temperature of ${max} Celsius`}</p>
-            <p className="h7">{`Minimum temperature of ${min} Celsius`}</p>
-          </Card.Text>
+        <Card.Img bsPrefix="weather-img" src={Weather} />
+        <Card.Text style={{ margin: "20px" }}>
+          <span
+            style={{ display: "block", marginBottom: "15px" }}
+            className="h7"
+          >{`The sky will have ${sky}`}</span>
+          <span
+            style={{ display: "block", marginBottom: "15px" }}
+            className="h7"
+          >{`${wind}`}</span>
+          <span
+            style={{ display: "block", marginBottom: "15px" }}
+            className="h7"
+          >{`Maximum temperature of ${max} Celsius`}</span>
+          <span
+            style={{ display: "block", marginBottom: "15px" }}
+            className="h7"
+          >{`Minimum temperature of ${min} Celsius`}</span>
+        </Card.Text>
       </Card>
     </div>
   );

@@ -54,7 +54,7 @@ function RoomCard(props) {
                   
                 />
                 <p className="p color search-auto-margin">{item.description}</p>
-                <p  className="h6 color search-auto-margin">£{item.price}</p>
+                <p  className="h6 color search-auto-margin">£{item.price*(props.outi-props.ini)}</p>
               </Card>
             );
           })}
